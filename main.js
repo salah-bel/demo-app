@@ -75,10 +75,10 @@ for (let i = 0; i < products.length; i++) {
 	<img src= ${products[i].imageUrl} class="card-img-top" alt="..." height=150>
 	<div class="card-body">
 		<h5 class="card-title">${products[i].title}</h5>
-		<p class="card-text">${products[i].description}</p>
+		<p class="card-text">${products[i].description.substring(0,50)}</p>
 		<div class="row justify-content-between">
 		<span>prix : <strong>${products[i].price.toFixed(2)} &euro;</strong></span> </span>
-		<a href="#" class="btn btn-primary">Plus..</a>
+		<a href="./show-one-product.html" class="btn btn-primary">Detail du produit..</a>
 		</div>
 
 	</div>
