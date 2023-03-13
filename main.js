@@ -86,3 +86,6 @@ for (let i = 0; i < products.length; i++) {
 	`
 
 }
+function trm (str) {
+    str.s
+}
