@@ -1,4 +1,4 @@
-var products = [{
+export var products = [{
         id: 1,
         title: "iPhone X",
         description: "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",

@@ -1,3 +1,4 @@
+import { products } from './moduls/products.js'
 var productList = document.getElementById("product-list");
 var title = document.getElementById("title");
 

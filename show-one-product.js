@@ -1,3 +1,5 @@
+import { products } from './moduls/products.js'
+
 var productDetail = document.getElementById('container');
 var params = window.location.search
 const searchParams = new URLSearchParams(params);
