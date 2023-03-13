@@ -1,5 +1,3 @@
-var productList = document.getElementById("product-list");
-var title = document.getElementById("title");
 var products = [{
         id: 1,
         title: "iPhone X",
@@ -59,22 +57,20 @@ var products = [{
 
 ]
 
-// AFFICHER TOUT LES PRODUITS
-for (let i = 0; i < products.length; i++) {
+var params = window.location.search
+const searchParams = new URLSearchParams(params);
+var productId = searchParams.get("id");
 
-    productList.innerHTML += `
-	<div class="card" style="width: 18rem;">
-	<img src= ${products[i].imageUrl} class="card-img-top" alt="..." height=150>
-	<div class="card-body">
-		<h5 class="card-title">${products[i].title}</h5>
-		<p class="card-text">${products[i].description.substring(0,50)}</p>
-		<div class="row justify-content-between">
-		<span>prix : <strong>${products[i].price.toFixed(2)} &euro;</strong></span> </span>
-		<a href="show-one-product.html?id=${products[i].id}" class="btn btn-primary">Detail du produit..</a>
-		</div>
+console.log(productId)
 
-	</div>
-</div>
-	`
 
-}
+
+// AFFICHER LE DETAIL D UN PRODUIT
+
+products.forEach(function(product) {
+    if (product.id == productId) {
+        console.log(product.title)
+        console.log(product.description)
+        console.log(product.imageUrl)
+    }
+})
